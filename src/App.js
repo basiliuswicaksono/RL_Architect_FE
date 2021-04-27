@@ -18,22 +18,29 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
           renders the first one that matches the current URL. */}
         <Switch>
+          
           {/* <Route path="/about-us">
-          <AboutUs />
-        </Route>
-        <Route path="/price">
-          <Price />
-        </Route>
-        <Route path="/project-detail">
-          <ProjectDetail />
-        </Route> */}
+            <AboutUs />
+          </Route> */}
+{/* 
+          <Route path="/price">
+            <Price />
+          </Route> */}
+
+          {/* <Route path="/project-detail">
+            <ProjectDetail />
+          </Route> */}
+
           <Route path="/style-detail">
             <StyleDetail />
           </Route>
+
           <Route path="/">
             <Home />
           </Route>
+
         </Switch>
+
       </div>
     </Router>
   );

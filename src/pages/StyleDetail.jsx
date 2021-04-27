@@ -1,7 +1,7 @@
-const StyleDetail = () => {
-  return (
-    
-  );
-}
+// const StyleDetail = () => {
+//   return (
 
-export default StyleDetail;
+//   );
+// }
+
+// export default StyleDetail;
