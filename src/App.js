@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import {
   Home,
-  StyleDetail,
+  // StyleDetail,
   // ProjectDetail,
-  // Price,
-  // AboutUs,
+  Price,
+  AboutUs,
 } from "./pages";
 import Navbar from "./components/Navbar";
 import "./App.css";
@@ -19,21 +19,21 @@ function App() {
           renders the first one that matches the current URL. */}
         <Switch>
           
-          {/* <Route path="/about-us">
+          <Route path="/about-us">
             <AboutUs />
-          </Route> */}
-{/* 
+          </Route>
+
           <Route path="/price">
             <Price />
-          </Route> */}
+          </Route>
 
           {/* <Route path="/project-detail">
             <ProjectDetail />
           </Route> */}
 
-          <Route path="/style-detail">
+          {/* <Route path="/style-detail">
             <StyleDetail />
-          </Route>
+          </Route> */}
 
           <Route path="/">
             <Home />

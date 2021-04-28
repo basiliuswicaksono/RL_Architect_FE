@@ -1,46 +1,40 @@
-import { Link } from "react-router-dom";
+import React from "react";
+import {
+  Nav,
+  NavLink,
+  Bars,
+  NavMenu,
+  // NavBtn,
+  // NavBtnLink,
+} from "./NavbarElements";
+import logo from "../images/logo.svg";
 
 const Navbar = () => {
   return (
-    // <nav>
-    //   <ul>
-    //     <li>
-    //       <Link to="/">Home</Link>
-    //     </li>
-    //     <li>
-    //       <Link to="/price">Price</Link>
-    //     </li>
-    //     <li>
-    //       <Link to="/about-us">About Us</Link>
-    //     </li>
-    //   </ul>
-    // </nav>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <Link class="navbar-brand" to="/">
-        RL Architect
-      </Link>
-
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <Link class="nav-link" to="/">
-              Home
-            </Link>
-          </li>
-          <li class="nav-item">
-            <Link class="nav-link" to="/price">
-              Price
-            </Link>
-          </li>
-          <li class="nav-item">
-            <Link class="nav-link" to="/about-us">
-              About Us
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <>
+      <Nav>
+        <NavLink to="/">
+          <img src={logo} alt="logo" />
+        </NavLink>
+        <Bars />
+        <NavMenu>
+          <NavLink to="/about-us" activeStyle>
+            About Us
+          </NavLink>
+          <NavLink to="/price" activeStyle>
+            Price
+          </NavLink>
+          <NavLink to="/contact-us" activeStyle>
+            Contact Us
+          </NavLink>
+          {/* Second Nav */}
+          {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
+        </NavMenu>
+        {/* <NavBtn>
+          <NavBtnLink to="/signin">Sign In</NavBtnLink>
+        </NavBtn> */}
+      </Nav>
+    </>
   );
 };
 

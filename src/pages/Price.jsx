@@ -1,7 +1,19 @@
 const Price = () => {
   return (
-    
+    <div>
+      <header>
+        <p>Price</p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
-}
+};
 
 export default Price;
