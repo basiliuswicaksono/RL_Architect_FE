@@ -1,7 +1,7 @@
-const ProjectDetail = () => {
-  return (
-    
-  );
-}
+// const ProjectDetail = () => {
+//   return (
 
-export default ProjectDetail;
+//   );
+// }
+
+// export default ProjectDetail;

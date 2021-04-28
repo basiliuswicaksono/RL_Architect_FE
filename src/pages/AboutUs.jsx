@@ -1,8 +1,8 @@
 const AboutUs = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>home</p>
+    <div>
+      <header>
+        <p>About Us</p>
         <a
           className="App-link"
           href="https://reactjs.org"
