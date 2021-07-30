@@ -28,7 +28,7 @@
 }
 
 .navbar-logo {
-  color: rgb(220, 82, 82);
+  color: rgb(14, 160, 133);
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
@@ -59,7 +59,7 @@
 }
 
 .nav-links {
-  color: rgb(220, 82, 82);
+  color: rgb(214, 110, 40);
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -68,12 +68,12 @@
 }
 
 .nav-links:hover {
-  border-bottom: 4px solid rgb(191, 78, 78);
+  border-bottom: 4px solid rgb(14, 160, 133);
   transition: all 0.2s ease-out;
 }
 
 .fa-bars {
-  color: rgb(220, 82, 82);
+  color: rgb(255, 149, 149);
 }
 
 .nav-links-mobile {
