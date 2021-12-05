@@ -1,19 +1,7 @@
-const Price = () => {
-  return (
-    <div>
-      <header>
-        <p>Price</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-};
+import React from "react";
+
+function Price(props) {
+  return <div></div>;
+}
 
 export default Price;

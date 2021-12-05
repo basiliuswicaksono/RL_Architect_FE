@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import {
   Home,
-  // StyleDetail,
-  // ProjectDetail,
   Price,
   AboutUs,
+  ProjectDetail,
+  StyleDetail
 } from "./pages";
 import Navbar from "./components/Navbar";
 import "./App.css";
@@ -27,13 +27,13 @@ function App() {
             <Price />
           </Route>
 
-          {/* <Route path="/project-detail">
+          <Route path="/project-detail">
             <ProjectDetail />
-          </Route> */}
+          </Route>
 
-          {/* <Route path="/style-detail">
+          <Route path="/style-detail">
             <StyleDetail />
-          </Route> */}
+          </Route>
 
           <Route path="/">
             <Home />

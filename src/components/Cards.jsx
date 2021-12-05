@@ -1,49 +1,37 @@
 import React from "react";
 import "./Cards.css";
-import CardItem from "./CardItem";
+import { Row, Col, Card } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
+// import axios from "axios";
+// import { useState, useEffect } from "react";
 
-function Cards() {
+function Cards(props) {
+  const history = useHistory();
+  const handleClickDetail = (item) => {
+    history.push("/project-detail", { params: item });
+  };
+
   return (
-    <div className="cards">
-      <h1>Exterior - Interior</h1>
-      <div className="cards__container">
-        <div className="cards__wrapper">
-          <ul className="cards__items">
-            <CardItem
-              src="https://i.imgur.com/MAn8xRQ.jpg"
-              text="Explore the hidden waterfall deep inside the Amazon Jungle"
-              label="Adventure"
-              path="/services"
-            />
-            <CardItem
-              src="https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350"
-              text="Travel through the Islands of Bali in a Private Cruise"
-              label="Luxury"
-              path="/services"
-            />
-          </ul>
-          <ul className="cards__items">
-            <CardItem
-              src="images/img-3.jpg"
-              text="Set Sail in the Atlantic Ocean visiting Uncharted Waters"
-              label="Mystery"
-              path="/services"
-            />
-            <CardItem
-              src="images/img-4.jpg"
-              text="Experience Football on Top of the Himilayan Mountains"
-              label="Adventure"
-              path="/products"
-            />
-            <CardItem
-              src="images/img-8.jpg"
-              text="Ride through the Sahara Desert on a guided camel tour"
-              label="Adrenaline"
-              path="/sign-up"
-            />
-          </ul>
-        </div>
-      </div>
+    <div>
+      <h1 className={"mt-5"}>{props.data.name}</h1>
+      <Row xs={1} md={2} className="g-4 mt-4">
+        {props.data.Projects.map((item, idx) => (
+          <Col key={idx}>
+            <Card
+              className="shadow-lg p-1 mb-5 bg-white rounded border-0"
+              onClick={() => handleClickDetail(item)}
+            >
+              <Card.Img variant="top" src={item.Pictures[0].url_picture} />
+              <Card.Body>
+                <Card.Title>{item.name}</Card.Title>
+                <Card.Text className="small text-secondary">
+                  {item.desc}
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
     </div>
   );
 }

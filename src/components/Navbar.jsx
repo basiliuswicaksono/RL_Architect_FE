@@ -1,72 +1,54 @@
-import React, { useState } from "react";
+import React from "react";
+import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
 
-function Navbar() {
-  const [click, setClick] = useState(false);
-  const [navbar, setNavbar] = useState(false);
-
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
-
-  const changeBackground = () => {
-    if (window.scrollY >= 60) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
-  };
-
-  window.addEventListener("scroll", changeBackground);
-
+function NavbarComponent() {
   return (
     <>
-      <nav className={navbar ? " navbar active" : "navbar"}>
-        <div className="navbar-container">
-          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            RL Architect
-            <i className="fab fa-typo3" />
-          </Link>
-          <div className="menu-icon" onClick={handleClick}>
-            <i className={click ? "fas fa-times" : "fas fa-bars"} />
-          </div>
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+      <Navbar
+        expand="lg"
+        bg="light"
+        variant="light"
+        sticky="top"
+        className="shadow-lg bg-white"
+      >
+        <Container>
+          <Navbar.Brand as={Link} to="/">
+            <i className="fas fa-home"></i>
+            RL Arsitek
+          </Navbar.Brand>
+
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              {/* <Nav.Link href="/">Home</Nav.Link> */}
+              <Nav.Link as={Link} to="/">
                 Home
-              </Link>
-            </li>
+              </Nav.Link>
 
-            <li className="nav-item">
-              <Link to="/price" className="nav-links" onClick={closeMobileMenu}>
+              <NavDropdown title="Products/Services" id="basic-nav-dropdown">
+                <NavDropdown.Item as={Link} to="">
+                  Exterior
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item as={Link} to="">
+                  Interior
+                </NavDropdown.Item>
+              </NavDropdown>
+
+              <Nav.Link as={Link} to="/price">
                 Price
-              </Link>
-            </li>
+              </Nav.Link>
 
-            <li className="nav-item">
-              <Link
-                to="/about-us"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
+              <Nav.Link as={Link} to="/about-us">
                 About Us
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                to="/contact-us"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Contact Us
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </>
   );
 }
 
-export default Navbar;
+export default NavbarComponent;

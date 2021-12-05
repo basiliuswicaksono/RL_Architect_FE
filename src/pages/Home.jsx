@@ -1,13 +1,15 @@
 import React from "react";
 import Banner from "../components/Banner";
 import Categories from "../components/Categories";
-import "../App.css";
+import Footer from "../components/Footer";
+// import "../App.css";
 
 const Home = () => {
   return (
-    <div className="home">
+    <div>
       <Banner />
       <Categories />
+      <Footer />
     </div>
   );
 };

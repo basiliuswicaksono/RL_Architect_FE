@@ -1,19 +1,7 @@
-const AboutUs = () => {
-  return (
-    <div>
-      <header>
-        <p>About Us</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-};
+import React from "react";
+
+function AboutUs(props) {
+  return <div></div>;
+}
 
 export default AboutUs;

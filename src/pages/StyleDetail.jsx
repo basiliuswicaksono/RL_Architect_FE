@@ -1,7 +1,7 @@
-// const StyleDetail = () => {
-//   return (
+import React from "react";
 
-//   );
-// }
+function StyleDetail(props) {
+  return <div></div>;
+}
 
-// export default StyleDetail;
+export default StyleDetail;
